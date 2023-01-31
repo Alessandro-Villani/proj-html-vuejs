@@ -1,29 +1,56 @@
-const headerMenus = [
+const headerMenus = {
+    menuButtons: [
     {
+        id: 1,
         title: 'home',
-        links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5']
+        submenu: {
+            links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5'],
+            show: false
+        }
     },
     {
+        id: 2,
         title: 'pages',
-        links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5']
+        submenu: {
+            links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5'],
+            show: false
+        }
     },
     {
+        id: 3,
         title: 'courses',
-        links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5']
+        submenu: {
+            links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5'],
+            show: false
+        }
     },
     {
+        id: 4,
         title: 'features',
-        links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5']
+         submenu: {
+            links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5'],
+            show: false
+        }
     },
     {
+        id: 5,
         title: 'blog',
-        links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5']
+         submenu: {
+            links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5'],
+            show: false
+        }
     },
     {
+        id: 6,
         title: 'shop',
-        links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5']
+         submenu: {
+            links: ['link 1', 'link 2', 'link 3', 'link 4', 'link 5'],
+            show: false
+        }
     }
-];
+    ],
+    socialButtons: ['fa-twitter', 'fa-facebook', 'fa-instagram', 'fa-linkedin']
+};
 
 const coachingCards = [
     {

@@ -13,7 +13,7 @@ export default {
     <button class="btn btn-main" :class="size" @click="$emit('button-click')">{{ label }}</button>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @use '../../assets/styles/partials/variables' as *;
 
 .btn.btn-main {
