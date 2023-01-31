@@ -8,7 +8,8 @@ export default {
 </script>
 
 <template>
-    <CountDown title="Starts TOMORROW! Our biggest event of the year..." date="2-4-2023" />
+    <CountDown title="Starts TOMORROW! Our biggest event of the year..." date="2-4-2023" :has-button="true"
+        label="Get ticket" />
 
 </template>
 
