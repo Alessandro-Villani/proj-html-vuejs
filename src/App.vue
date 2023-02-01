@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppJumbotron from './components/AppJumbotron.vue';
+import AppNewsletter from './components/AppNewsletter.vue';
 import AppSection from './components/AppSection.vue';
 import ArticleCard from './components/articles_section/ArticleCard.vue';
 import CoachingCard from './components/coaching_section/CoachingCard.vue';
@@ -24,7 +25,7 @@ export default {
             eventCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter }
 }
 </script>
 
@@ -73,6 +74,7 @@ export default {
                 <EventsCard v-for="(event, i) in eventCards" :eventData="event" :cardIndex="i" />
             </div>
         </app-section>
+        <AppNewsletter />
     </main>
 
 </template>

@@ -2,7 +2,7 @@
 export default {
     name: 'EventsCard',
     props: {
-        eventData: String,
+        eventData: Object,
         cardIndex: Number
     },
     computed: {
