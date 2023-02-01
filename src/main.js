@@ -12,11 +12,13 @@ import {faFacebook} from '@fortawesome/free-brands-svg-icons';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import {faCircle} from '@fortawesome/free-solid-svg-icons';
+import { faFileLines } from '@fortawesome/free-regular-svg-icons';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 
 
 
 
-library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin, faCircle);
+library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin, faCircle, faFileLines, faUser);
 
 const app = createApp(App)
 

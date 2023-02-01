@@ -107,7 +107,7 @@ const testimonialCards = [
     }
 ];
 
-const artistCards = [
+const coursesCards = [
     {
         title: 'the acrylic painting academy',
         price: 18,
@@ -159,7 +159,7 @@ const artistCards = [
     },
     {
         title: 'the colored pencil drawing course',
-        price: 6,
+        price: 22,
         lessons: 6,
         students: 50, 
         imgUrl: 'artist-course-01-480x480.jpg'
@@ -232,4 +232,4 @@ const coachingFeedback = {
     p2: 'As an artist and an educator for nearly 30 years, I understand what it takes to create.'
 }
 
-export {headerMenus, coachingCards, testimonialCards, artistCards, articleCards, eventCards, footerMenus, coachingFeedback}
+export {headerMenus, coachingCards, testimonialCards, coursesCards, articleCards, eventCards, footerMenus, coachingFeedback}

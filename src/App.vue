@@ -4,9 +4,10 @@ import AppJumbotron from './components/AppJumbotron.vue';
 import AppSection from './components/AppSection.vue';
 import CoachingCard from './components/coaching_section/CoachingCard.vue';
 import CoachingFeedbackCard from './components/coaching_section/CoachingFeedbackCard.vue';
+import CoursesCard from './components/courses_section/CoursesCard.vue';
 import CountDown from './components/generics/CountDown.vue';
 import CardSlider from './components/testimonials_section/CardSlider.vue';
-import { coachingCards, coachingFeedback, testimonialCards } from './data'
+import { coachingCards, coachingFeedback, testimonialCards, coursesCards } from './data'
 
 export default {
     name: 'MaxCoach',
@@ -14,10 +15,11 @@ export default {
         return {
             coachingCards,
             coachingFeedback,
-            testimonialCards
+            testimonialCards,
+            coursesCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard }
 }
 </script>
 
@@ -49,6 +51,9 @@ export default {
             <CardSlider :cardsData="testimonialCards" />
         </app-section>
         <app-section type="artists" title="Artist coaching" subtitle="Latest Online Courses">
+            <div class="row row-cols-4">
+                <CoursesCard v-for="course in coursesCards" :courseData="course" />
+            </div>
 
         </app-section>
     </main>
