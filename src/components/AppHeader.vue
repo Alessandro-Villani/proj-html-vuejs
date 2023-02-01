@@ -14,7 +14,7 @@ export default {
 <template>
     <header class="py-3">
         <div class="container">
-            <div class="row justify-content-between align-items-start">
+            <div class="row justify-content-between align-items-center">
                 <a href="#" class="logo col-2"><img class="img-fluid" src="../assets/img/dark-logo.png" alt="logo"></a>
                 <nav class="menu col flex-grow-1 align-items-center">
                     <ul class="d-flex justify-content-between mb-0">
@@ -23,8 +23,11 @@ export default {
                                     link.title
                                 }}</span><font-awesome-icon icon="fa-solid fa-chevron-down"
                                     :class="{ 'rotate': link.submenu.show }" /></button>
-                            <ul class="submenu" v-if="link.submenu.show">
-                                <li v-for="link in link.submenu.links"><a href="#" class="menu-btn">{{ link }}</a></li>
+                            <ul class="submenu py-1" v-if="link.submenu.show">
+                                <li v-for="link in link.submenu.links" class="mb-1"><a href="#" class="menu-btn">{{
+                                    link
+                                }}</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -57,11 +60,29 @@ ul {
         border: none;
     }
 
-    li button,
-    li a {
-        text-transform: capitalize;
+    li {
+        position: relative;
+
+        button,
+        a {
+            text-transform: capitalize;
+
+        }
+
+        .submenu {
+            padding: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            border: 1px solid $lightgray;
+            background-color: white;
+        }
+
 
     }
+
+
 }
 
 .menu ul {
@@ -75,9 +96,7 @@ ul {
         }
     }
 
-    .submenu {
-        padding: 0;
-    }
+
 }
 
 .social a {

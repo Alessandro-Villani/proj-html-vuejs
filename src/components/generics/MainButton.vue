@@ -4,13 +4,14 @@ export default {
     props: {
         label: String,
         size: String,
+        type: String
     },
     emits: ['button-click'],
 }
 </script>
 
 <template>
-    <button class="btn btn-main" :class="size" @click="$emit('button-click')">{{ label }}</button>
+    <button class="btn btn-main" :class="[size, type]" @click="$emit('button-click')">{{ label }}</button>
 </template>
 
 <style scoped lang="scss">
@@ -27,8 +28,18 @@ export default {
         padding: 6px 24px;
     }
 
+    &.secondary {
+        background-color: rgba($orange, $alpha: 0.3);
+        color: $orange;
+    }
+
     &:hover {
         background-color: $lightblue;
+        color: white;
+    }
+
+    &.secondary:hover {
+        background-color: $orange;
         color: white;
     }
 }
