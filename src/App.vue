@@ -6,10 +6,11 @@ import ArticleCard from './components/articles_section/ArticleCard.vue';
 import CoachingCard from './components/coaching_section/CoachingCard.vue';
 import CoachingFeedbackCard from './components/coaching_section/CoachingFeedbackCard.vue';
 import CoursesCard from './components/courses_section/CoursesCard.vue';
+import EventsCard from './components/events_section/EventsCard.vue';
 import CountDown from './components/generics/CountDown.vue';
 import MainButton from './components/generics/MainButton.vue';
 import CardSlider from './components/testimonials_section/CardSlider.vue';
-import { coachingCards, coachingFeedback, testimonialCards, coursesCards, articleCards } from './data'
+import { coachingCards, coachingFeedback, testimonialCards, coursesCards, articleCards, eventCards } from './data'
 
 export default {
     name: 'MaxCoach',
@@ -19,10 +20,11 @@ export default {
             coachingFeedback,
             testimonialCards,
             coursesCards,
-            articleCards
+            articleCards,
+            eventCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard }
 }
 </script>
 
@@ -64,6 +66,11 @@ export default {
         <app-section type="articles" title="Articles and Tips" subtitle="Latest From The Blog" color="tertiary">
             <div class="row row-cols-3">
                 <ArticleCard v-for="card in articleCards" :cardData="card" />
+            </div>
+        </app-section>
+        <app-section type="events" title="Upcoming Events" subtitle="Let's Work Together">
+            <div class="row row-cols-2">
+                <EventsCard v-for="(event, i) in eventCards" :eventData="event" :cardIndex="i" />
             </div>
         </app-section>
     </main>

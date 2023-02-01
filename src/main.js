@@ -16,11 +16,12 @@ import { faFileLines } from '@fortawesome/free-regular-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 
 
 
-library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin, faCircle, faFileLines, faUser, faCalendar, faEye);
+library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin, faCircle, faFileLines, faUser, faCalendar, faEye, faLocationDot);
 
 const app = createApp(App)
 
