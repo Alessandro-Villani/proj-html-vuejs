@@ -48,6 +48,9 @@ export default {
         <app-section type="testimonials" title="Testimonials" subtitle="Why do people love me?" color="secondary">
             <CardSlider :cardsData="testimonialCards" />
         </app-section>
+        <app-section type="artists" title="Artist coaching" subtitle="Latest Online Courses">
+
+        </app-section>
     </main>
 
 </template>

@@ -3,20 +3,57 @@ import TestimonialCard from './TestimonialCard.vue';
 
 export default {
     name: "CardSlider",
+    data() {
+        return {
+            currentIndex: 0,
+            sliderInterval: null
+        }
+    },
     props: {
         cardsData: Array
     },
-    components: { TestimonialCard }
+    components: { TestimonialCard },
+    methods: {
+        defineOrder(i) {
+            if (i === this.currentIndex) {
+                return 1
+            } else if (i === (this.currentIndex - 1) || (this.currentIndex === 0 && i === (this.cardsData.length - 1))) {
+                return 0
+            } else if (i === (this.currentIndex + 1)) {
+                return 2
+            } else {
+                return 3
+            }
+        },
+        slider() {
+            this.sliderInterval = setInterval(() => {
+                if (this.currentIndex === (this.cardsData.length - 1)) {
+                    this.currentIndex = 0;
+                } else {
+                    this.currentIndex++
+                }
+            }, 3000)
+        },
+        selectCard(i) {
+            clearInterval(this.sliderInterval);
+            this.currentIndex = i;
+            setTimeout(() => this.slider(), 30000);
+        }
+    },
+    mounted() {
+        this.slider()
+    }
 }
 </script>
 
 <template>
     <div class="cards-row row row-cols-3 mb-5 flex-nowrap">
-        <TestimonialCard v-for="(card, i) in cardsData" :key="i" :testimonialData="card" />
+        <TestimonialCard v-for="(card, i) in cardsData" :key="i" :testimonialData="card" :order="defineOrder(i)" />
     </div>
     <div class="row">
         <div class="col-4 m-auto d-flex justify-content-center">
-            <font-awesome-icon v-for="(card, i) in cardsData" :key="i" icon="fa-solid fa-circle" class="me-2" />
+            <font-awesome-icon v-for="(card, i) in cardsData" :key="i" icon="fa-solid fa-circle" class="me-2"
+                :class="{ 'selected': i === this.currentIndex }" @click="selectCard(i)" />
         </div>
     </div>
 </template>
@@ -29,6 +66,7 @@ export default {
 svg {
     opacity: 0.5;
     scale: 0.5;
+    cursor: pointer;
 
     &.selected {
         opacity: 1;

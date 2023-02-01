@@ -3,6 +3,7 @@ export default {
     name: 'TestimonialCard',
     props: {
         testimonialData: Object,
+        order: Number
     },
     computed: {
         getImageUrl() {
@@ -13,8 +14,8 @@ export default {
 </script>
 
 <template>
-    <div class="col d-flex">
-        <div class="testimonial-card p-3 d-flex flex-column justify-content-between">
+    <div class="col d-flex" :style="{ 'order': order }">
+        <div class="testimonial-card p-3 d-flex flex-column justify-content-between" :class="{ 'active': order === 1 }">
             <div class="testimonial-feedback mb-5">
                 <h5 class="mb-3">{{ testimonialData.title }}</h5>
                 <p>{{ testimonialData.review }}</p>
@@ -37,9 +38,11 @@ export default {
     background-color: white;
     border-radius: 10px;
     opacity: 0.5;
+    transform: scale(0.9);
 
     &.active {
         opacity: 1;
+        transform: scale(1);
     }
 
     img {
