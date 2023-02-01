@@ -168,23 +168,26 @@ const coursesCards = [
 
 const articleCards = [
     {
-        title: 'pocket-sized notebooks hold miniature paintings',
+        title: 'brush strokes energize trees in paintings',
         date: new Date('05-15-2020'),
-        views: 603, 
-        imgUrl: 'artist-blog-01-480x356.jpg'
+        views: 688, 
+        imgUrl: 'artist-blog-03-480x356.jpeg',
+        position: 'left'
     },
     {
         title: 'connection between self-portraits and identity',
         date: new Date('05-15-2020'),
         views: 377, 
-        imgUrl: 'artist-blog-02-500x680.jpg'
+        imgUrl: 'artist-blog-02-500x680.jpg',
+        position: 'main'
     },
     {
-        title: 'brush strokes energize trees in paintings',
+        title: 'pocket-sized notebooks hold miniature paintings',
         date: new Date('05-15-2020'),
-        views: 688, 
-        imgUrl: 'artist-blog-03-480x356.jpg'
-    }  
+        views: 603, 
+        imgUrl: 'artist-blog-01-480x356.jpg',
+        position: 'right'
+    }
 ];
 
 const eventCards = [

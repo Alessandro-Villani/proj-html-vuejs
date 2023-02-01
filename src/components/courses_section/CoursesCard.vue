@@ -18,7 +18,7 @@ export default {
 <template>
     <div class="col mb-3 d-flex">
         <div class="courses-card d-flex flex-column">
-            <img class="img-fluid" :src="getImageUrl" :alt="title">
+            <img class="img-fluid" :src="getImageUrl" :alt="courseData.title">
             <div class="course-info d-flex flex-column justify-content-between flex-grow-1 p-3">
                 <p class="h6 price">${{ formattedPrice }}</p>
                 <h5 class="title">{{ courseData.title }}</h5>

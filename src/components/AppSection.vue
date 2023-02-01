@@ -43,4 +43,8 @@ h2.section-title {
 section.secondary {
     background-color: $lightgray;
 }
+
+section.tertiary {
+    background-color: $mediumgray;
+}
 </style>

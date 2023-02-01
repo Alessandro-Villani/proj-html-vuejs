@@ -2,12 +2,14 @@
 import AppHeader from './components/AppHeader.vue';
 import AppJumbotron from './components/AppJumbotron.vue';
 import AppSection from './components/AppSection.vue';
+import ArticleCard from './components/articles_section/ArticleCard.vue';
 import CoachingCard from './components/coaching_section/CoachingCard.vue';
 import CoachingFeedbackCard from './components/coaching_section/CoachingFeedbackCard.vue';
 import CoursesCard from './components/courses_section/CoursesCard.vue';
 import CountDown from './components/generics/CountDown.vue';
+import MainButton from './components/generics/MainButton.vue';
 import CardSlider from './components/testimonials_section/CardSlider.vue';
-import { coachingCards, coachingFeedback, testimonialCards, coursesCards } from './data'
+import { coachingCards, coachingFeedback, testimonialCards, coursesCards, articleCards } from './data'
 
 export default {
     name: 'MaxCoach',
@@ -16,10 +18,11 @@ export default {
             coachingCards,
             coachingFeedback,
             testimonialCards,
-            coursesCards
+            coursesCards,
+            articleCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard }
 }
 </script>
 
@@ -51,10 +54,17 @@ export default {
             <CardSlider :cardsData="testimonialCards" />
         </app-section>
         <app-section type="artists" title="Artist coaching" subtitle="Latest Online Courses">
-            <div class="row row-cols-4">
+            <div class="row row-cols-4 mb-5">
                 <CoursesCard v-for="course in coursesCards" :courseData="course" />
             </div>
-
+            <div class="text-center">
+                <MainButton label="View all courses &rarr;" type="secondary" />
+            </div>
+        </app-section>
+        <app-section type="articles" title="Articles and Tips" subtitle="Latest From The Blog" color="tertiary">
+            <div class="row row-cols-3">
+                <ArticleCard v-for="card in articleCards" :cardData="card" />
+            </div>
         </app-section>
     </main>
 
