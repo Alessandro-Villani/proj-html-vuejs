@@ -5,13 +5,14 @@ export default {
     props: {
         type: String,
         title: String,
-        subtitle: String
+        subtitle: String,
+        color: String
     },
 }
 </script>
 
 <template>
-    <section class="py-5" :class="type">
+    <section class="py-5" :class="[type, color]">
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-5 m-auto text-center ">
@@ -30,12 +31,16 @@ export default {
 
 h2.section-title {
     font-family: "Allison", cursive;
-    font-size: 40px;
+    font-size: 50px;
     color: $lightblue;
 }
 
 .subtitle {
     font-weight: bold;
     font-size: 28px;
+}
+
+section.secondary {
+    background-color: $lightgray;
 }
 </style>

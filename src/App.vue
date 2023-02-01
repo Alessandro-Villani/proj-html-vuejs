@@ -5,17 +5,19 @@ import AppSection from './components/AppSection.vue';
 import CoachingCard from './components/coaching_section/CoachingCard.vue';
 import CoachingFeedbackCard from './components/coaching_section/CoachingFeedbackCard.vue';
 import CountDown from './components/generics/CountDown.vue';
-import { coachingCards, coachingFeedback } from './data'
+import CardSlider from './components/testimonials_section/CardSlider.vue';
+import { coachingCards, coachingFeedback, testimonialCards } from './data'
 
 export default {
     name: 'MaxCoach',
     data() {
         return {
             coachingCards,
-            coachingFeedback
+            coachingFeedback,
+            testimonialCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider }
 }
 </script>
 
@@ -29,7 +31,7 @@ export default {
         <app-section type="coaching" title="Artist coaching"
             subtitle="I understand what it takes to create. I can help you with">
             <div class="row row-cols-4 mb-5">
-                <CoachingCard v-for="card in coachingCards" :coachingCardData="card" />
+                <CoachingCard v-for="card in coachingCards" :key="card.title" :coachingCardData="card" />
             </div>
             <div class="row mb-5">
                 <CoachingFeedbackCard :feedback="coachingFeedback" :hasButton="true" buttonLabel="Get started today" />
@@ -42,6 +44,9 @@ export default {
                         allowfullscreen></iframe>
                 </div>
             </div>
+        </app-section>
+        <app-section type="testimonials" title="Testimonials" subtitle="Why do people love me?" color="secondary">
+            <CardSlider :cardsData="testimonialCards" />
         </app-section>
     </main>
 

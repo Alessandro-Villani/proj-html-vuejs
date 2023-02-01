@@ -35,7 +35,7 @@ export default {
 
     h2 {
         font-family: "Allison", cursive;
-        font-size: 50px;
+        font-size: 60px;
         color: $lightblue;
     }
 

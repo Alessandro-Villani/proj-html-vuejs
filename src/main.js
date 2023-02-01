@@ -11,11 +11,12 @@ import {faTwitter} from '@fortawesome/free-brands-svg-icons';
 import {faFacebook} from '@fortawesome/free-brands-svg-icons';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {faCircle} from '@fortawesome/free-solid-svg-icons';
 
 
 
 
-library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin);
+library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin, faCircle);
 
 const app = createApp(App)
 
