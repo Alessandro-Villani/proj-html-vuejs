@@ -15,8 +15,10 @@ export default {
     methods: {
         //Function resetting input field and sending emit
         sendForm() {
-            this.inputField = '';
-            this.$emit('send-form')
+            if (this.inputField) {
+                this.inputField = '';
+                this.$emit('send-form')
+            }
         }
     }
 }
@@ -25,7 +27,7 @@ export default {
 <template>
     <form class="w-100 px-5" @submit.prevent="sendForm">
         <div class="input-group mb-3">
-            <input v-model="inputField" :type="type" class="form-control" :placeholder="placeholder"
+            <input v-model.trim="inputField" :type="type" class="form-control" :placeholder="placeholder"
                 @keyup="$emit('update-field', inputField)">
             <button class="form-button">{{ buttonLabel }}</button>
         </div>
