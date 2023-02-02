@@ -1,18 +1,25 @@
 <script>
+import SectionTitle from './generics/SectionTitle.vue';
+
 
 export default {
-    name: 'AppSection',
+    name: "AppSection",
     props: {
         type: String,
         title: String,
         subtitle: String,
-        color: String
+        color: String,
+        hasSectionTitle: Boolean,
+        sectionTitle: String,
+        sectionTitleSide: String
     },
+    components: { SectionTitle }
 }
 </script>
 
 <template>
     <section class="py-5" :class="[type, color]">
+        <SectionTitle v-if="sectionTitle" :title="sectionTitle" :side="sectionTitleSide" />
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-5 m-auto text-center ">

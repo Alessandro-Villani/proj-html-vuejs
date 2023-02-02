@@ -57,7 +57,8 @@ export default {
         <app-section type="testimonials" title="Testimonials" subtitle="Why do people love me?" color="secondary">
             <CardSlider :cardsData="testimonialCards" />
         </app-section>
-        <app-section type="artists" title="Artist coaching" subtitle="Latest Online Courses">
+        <app-section type="courses" title="Artist coaching" subtitle="Latest Online Courses" :hasSectionTitle="true"
+            sectionTitle="Courses" sectionTitleSide="right">
             <div class="row row-cols-4 mb-5">
                 <CoursesCard v-for="course in coursesCards" :courseData="course" />
             </div>
@@ -73,7 +74,8 @@ export default {
                 <h5>Get into details now? <a href="#">View all posts &rarr;</a></h5>
             </div>
         </app-section>
-        <app-section type="events" title="Upcoming Events" subtitle="Let's Work Together">
+        <app-section type="events" title="Upcoming Events" subtitle="Let's Work Together" :hasSectionTitle="true"
+            sectionTitle="Events" sectionTitleSide="left">
             <div class="row row-cols-2">
                 <EventsCard v-for="(event, i) in eventCards" :eventData="event" :cardIndex="i" />
             </div>

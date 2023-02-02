@@ -1,10 +1,18 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+
+//BOOTSTRAP
 import "bootstrap/dist/css/bootstrap.min.css";
+
+//FONTSOURCE
+import '@fontsource/allison';
+import "@fontsource/londrina-outline";
+
+//FONTAWESOME
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
-import '@fontsource/allison';
 
+//ICONS
 import {faClock} from '@fortawesome/free-regular-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import {faTwitter} from '@fortawesome/free-brands-svg-icons';
