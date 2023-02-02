@@ -100,7 +100,7 @@ export default {
             sectionTitle="Courses" sectionTitleSide="right">
             <!-- COURSES CARD COMPONENT -->
             <div class="row row-cols-4 mb-5">
-                <CoursesCard v-for="course in coursesCards" :courseData="course" />
+                <CoursesCard v-for="course in coursesCards" :key="course.title" :courseData="course" />
             </div>
             <!-- BUTTON COMPONENT -->
             <div class="text-center">
@@ -112,7 +112,7 @@ export default {
         <app-section type="articles" title="Articles and Tips" subtitle="Latest From The Blog" color="tertiary">
             <div class="row row-cols-3 mb-5">
                 <!-- ARTICLE CARD COMPONENT -->
-                <ArticleCard v-for="card in articleCards" :cardData="card" />
+                <ArticleCard v-for="card in articleCards" :key="card.title" :cardData="card" />
             </div>
             <div class="details text-center">
                 <h5>Get into details now? <a href="#">View all posts &rarr;</a></h5>
@@ -124,7 +124,7 @@ export default {
             sectionTitle="Events" sectionTitleSide="left">
             <div class="row row-cols-2">
                 <!-- EVENT CARD COMPONENT -->
-                <EventsCard v-for="(event, i) in eventCards" :eventData="event" :cardIndex="i" />
+                <EventsCard v-for="(event, i) in eventCards" :key="i" :eventData="event" :cardIndex="i" />
             </div>
         </app-section>
 

@@ -37,9 +37,10 @@ export default {
                                 }}</span><font-awesome-icon icon="fa-solid fa-chevron-down"
                                     :class="{ 'rotate': link.submenu.show }" /></button>
                             <ul class="submenu py-1" v-if="link.submenu.show">
-                                <li v-for="link in link.submenu.links" class="mb-1"><a href="#" class="menu-btn">{{
-                                    link
-                                }}</a>
+                                <li v-for="(link, i) in link.submenu.links" :key="i" class="mb-1"><a href="#"
+                                        class="menu-btn">{{
+                                            link
+                                        }}</a>
                                 </li>
                             </ul>
                         </li>
@@ -47,8 +48,8 @@ export default {
                 </nav>
                 <nav class="social col-2">
                     <ul class="d-flex justify-content-between mb-0">
-                        <li v-for="link in headerMenus.socialButtons"><a href="#" class="menu-btn"><font-awesome-icon
-                                    :icon="['fa-brands', link]" /></a></li>
+                        <li v-for="(link, i) in headerMenus.socialButtons" :key="i"><a href="#"
+                                class="menu-btn"><font-awesome-icon :icon="['fa-brands', link]" /></a></li>
                     </ul>
                 </nav>
             </div>

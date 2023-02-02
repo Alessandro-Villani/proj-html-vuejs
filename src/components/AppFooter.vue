@@ -44,7 +44,7 @@ export default {
                 <div class="social-pics col">
                     <h5 class="d-inline-block me-2 mb-3">Instagram</h5><span><a href="#">@maxcoach</a></span>
                     <div class="row row-cols-3">
-                        <a v-for="(image, i) in footerMenus.igImagesUrls" href="#" class="col ig-a"><img
+                        <a v-for="(image, i) in footerMenus.igImagesUrls" :key="i" href="#" class="col ig-a"><img
                                 class="img-fluid" :src="getImageUrl(i)" :alt="`ig-${i}`"></a>
                     </div>
 
