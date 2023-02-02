@@ -12,8 +12,9 @@ import EventsCard from './components/events_section/EventsCard.vue';
 import CountDown from './components/generics/CountDown.vue';
 import GetToTop from './components/generics/GetToTop.vue';
 import MainButton from './components/generics/MainButton.vue';
+import SideBar from './components/generics/SideBar.vue';
 import CardSlider from './components/testimonials_section/CardSlider.vue';
-import { coachingCards, coachingFeedback, testimonialCards, coursesCards, articleCards, eventCards } from './data'
+import { coachingCards, coachingFeedback, testimonialCards, coursesCards, articleCards, eventCards, sideBarIcons } from './data'
 
 export default {
     name: 'MaxCoach',
@@ -24,10 +25,11 @@ export default {
             testimonialCards,
             coursesCards,
             articleCards,
-            eventCards
+            eventCards,
+            sideBarIcons
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter, GetToTop },
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter, GetToTop, SideBar },
     methods: {
         timerButtonClick() {
             console.log('countdown-click')
@@ -40,6 +42,9 @@ export default {
         },
         coachingButtonClick() {
             console.log('coaching-click')
+        },
+        sidebarButtonClick(e) {
+            console.log('sidebar ' + e + ' clicked')
         }
     }
 }
@@ -100,6 +105,7 @@ export default {
     </main>
     <AppFooter />
     <GetToTop link="#main-header" />
+    <SideBar :sideBarIcons="sideBarIcons" @sidebar-button-click="sidebarButtonClick" />
 </template>
 
 <style lang="scss">

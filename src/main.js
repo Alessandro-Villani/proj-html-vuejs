@@ -25,11 +25,14 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faRuler } from '@fortawesome/free-solid-svg-icons';
+import { faLifeRing } from '@fortawesome/free-solid-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 
-
-library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin, faCircle, faFileLines, faUser, faCalendar, faEye, faLocationDot);
+library.add(faClock, faChevronDown, faTwitter, faFacebook, faInstagram, faLinkedin, faCircle, faFileLines, faUser, faCalendar, faEye, faLocationDot, faRuler, faLifeRing, faBook, faCartShopping);
 
 const app = createApp(App)
 

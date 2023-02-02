@@ -253,4 +253,23 @@ const coachingFeedback = {
     p2: 'As an artist and an educator for nearly 30 years, I understand what it takes to create.'
 }
 
-export {headerMenus, coachingCards, testimonialCards, coursesCards, articleCards, eventCards, footerMenus, coachingFeedback}
+const sideBarIcons = [
+                        {
+                            icon: 'fa-ruler',
+                            event: 'ruler' 
+                        },
+                        {
+                            icon: 'fa-life-ring',
+                            event: 'lifering' 
+                        },
+                        {
+                            icon: 'fa-book',
+                            event: 'book' 
+                        },
+                        {
+                            icon: 'fa-cart-shopping',
+                            event: 'cart' 
+                        } 
+                    ]
+
+export {headerMenus, coachingCards, testimonialCards, coursesCards, articleCards, eventCards, footerMenus, coachingFeedback, sideBarIcons}
