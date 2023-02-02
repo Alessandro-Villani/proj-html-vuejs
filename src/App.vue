@@ -10,6 +10,7 @@ import CoachingFeedbackCard from './components/coaching_section/CoachingFeedback
 import CoursesCard from './components/courses_section/CoursesCard.vue';
 import EventsCard from './components/events_section/EventsCard.vue';
 import CountDown from './components/generics/CountDown.vue';
+import GetToTop from './components/generics/GetToTop.vue';
 import MainButton from './components/generics/MainButton.vue';
 import CardSlider from './components/testimonials_section/CardSlider.vue';
 import { coachingCards, coachingFeedback, testimonialCards, coursesCards, articleCards, eventCards } from './data'
@@ -26,7 +27,7 @@ export default {
             eventCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter, GetToTop }
 }
 </script>
 
@@ -83,6 +84,7 @@ export default {
         <AppNewsletter />
     </main>
     <AppFooter />
+    <GetToTop link="#main-header" />
 </template>
 
 <style lang="scss">

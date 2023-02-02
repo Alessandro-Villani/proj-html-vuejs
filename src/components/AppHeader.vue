@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-    <header class="py-3">
+    <header id="main-header" class="py-3">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <a href="#" class="logo col-2"><img class="img-fluid" src="../assets/img/dark-logo.png" alt="logo"></a>
