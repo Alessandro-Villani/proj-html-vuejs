@@ -26,8 +26,8 @@ export default {
 </script>
 
 <template>
-    <a :href="eventData.href" class="events-col col d-flex mb-5" :class="cardDirection">
-        <div class="events-card d-flex mb-5">
+    <a :href="eventData.href" class="events-col col d-flex mb-5">
+        <div class="events-card d-flex mb-5" :class="cardDirection">
             <img class="img-fluid" :src="getImageUrl" :alt="eventData.title">
             <div class="event-info p-4 d-flex flex-column justify-content-center">
                 <time class="mb-3">{{ formattetDate }}</time>
