@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'ArtocleCard',
+    name: 'ArticleCard',
     props: {
         cardData: Object
     },
