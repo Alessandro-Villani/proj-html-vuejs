@@ -2,7 +2,7 @@
 import { headerMenus } from '../data';
 import { footerMenus } from '../data';
 export default {
-    name: 'AppHeader',
+    name: 'AppFooter',
     data() {
         return {
             footerMenus,
