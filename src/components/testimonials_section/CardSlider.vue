@@ -75,6 +75,7 @@ svg {
     opacity: 0.5;
     scale: 0.5;
     cursor: pointer;
+    transition: all 1s;
 
     &.selected {
         opacity: 1;

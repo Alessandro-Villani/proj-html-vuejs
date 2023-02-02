@@ -9,13 +9,24 @@ export default {
         //Computed returning dynamic image url
         getImageUrl() {
             return new URL(`../../assets/img/${this.testimonialData.imgUrl}`, import.meta.url).href;
-        }
+        },
+
+        //Computed defining transform based on order
+        transform() {
+            if (this.order === 1) {
+                return 'scale(1)';
+            } else if (this.order === 0) {
+                return 'scale(0.9) translateX(-2%)';
+            } else if (this.order === 2) {
+                return 'scale(0.9) translateX(2%)';
+            }
+        },
     }
 }
 </script>
 
 <template>
-    <div class="col d-flex" :style="{ 'order': order }">
+    <div class="col d-flex" :style="{ 'order': order, 'transition': 'all 1s ease-in-out', 'transform': transform }">
         <div class="testimonial-card p-3 d-flex flex-column justify-content-between" :class="{ 'active': order === 1 }">
             <div class="testimonial-feedback mb-5">
                 <h5 class="mb-3">{{ testimonialData.title }}</h5>
@@ -41,6 +52,7 @@ export default {
     opacity: 0.5;
     transform: scale(0.9);
     cursor: pointer;
+    transition: all 1s ease-in-out;
 
     &.active {
         opacity: 1;
