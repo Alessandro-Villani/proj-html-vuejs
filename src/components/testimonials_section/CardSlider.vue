@@ -77,6 +77,11 @@ svg {
     cursor: pointer;
     transition: all 1s;
 
+    &:hover {
+        scale: 0.6;
+        opacity: 0.8
+    }
+
     &.selected {
         opacity: 1;
         scale: 0.8;
