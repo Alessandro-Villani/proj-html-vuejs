@@ -8,7 +8,8 @@ export default {
         content: String,
         hasButton: Boolean,
         buttonLabel: String
-    }
+    },
+    emits: ['jumbotron-button-click']
 }
 </script>
 
@@ -19,7 +20,7 @@ export default {
                 <div class="col-5 m-auto text-center">
                     <h2>{{ title }}</h2>
                     <p class="content mb-4">{{ content }}</p>
-                    <MainButton v-if="hasButton" :label="buttonLabel" />
+                    <MainButton v-if="hasButton" :label="buttonLabel" @button-click="$emit('jumbotron-button-click')" />
                 </div>
             </div>
         </div>

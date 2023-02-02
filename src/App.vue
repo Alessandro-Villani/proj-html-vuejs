@@ -27,24 +27,39 @@ export default {
             eventCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter, GetToTop }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter, GetToTop },
+    methods: {
+        timerButtonClick() {
+            console.log('countdown-click')
+        },
+        jumbotronButtonClick() {
+            console.log('jumbotron-click')
+        },
+        coursesButtonClick() {
+            console.log('courses-click')
+        },
+        coachingButtonClick() {
+            console.log('coaching-click')
+        }
+    }
 }
 </script>
 
 <template>
     <CountDown title="Starts TOMORROW! Our biggest event of the year..." date="2-4-2023" :has-button="true"
-        label="Get ticket" />
+        label="Get ticket" @timer-button-click="timerButtonClick" />
     <AppHeader />
     <main>
         <AppJumbotron title="Hello, I'm Matin" content="artist coaching and mentoring might be for you"
-            :hasButton="true" buttonLabel="Get started today" />
+            :hasButton="true" buttonLabel="Get started today" @jumbotron-button-click="jumbotronButtonClick" />
         <app-section type="coaching" title="Artist coaching"
             subtitle="I understand what it takes to create. I can help you with">
             <div class="row row-cols-4 mb-5">
                 <CoachingCard v-for="card in coachingCards" :key="card.title" :coachingCardData="card" />
             </div>
             <div class="row mb-5">
-                <CoachingFeedbackCard :feedback="coachingFeedback" :hasButton="true" buttonLabel="Get started today" />
+                <CoachingFeedbackCard :feedback="coachingFeedback" :hasButton="true" buttonLabel="Get started today"
+                    @coaching-button-click="coachingButtonClick" />
             </div>
             <div class="row">
                 <div class="col-6 m-auto text-center">
@@ -64,7 +79,7 @@ export default {
                 <CoursesCard v-for="course in coursesCards" :courseData="course" />
             </div>
             <div class="text-center">
-                <MainButton label="View all courses &rarr;" type="secondary" />
+                <MainButton label="View all courses &rarr;" type="secondary" @button-click="coursesButtonClick" />
             </div>
         </app-section>
         <app-section type="articles" title="Articles and Tips" subtitle="Latest From The Blog" color="tertiary">

@@ -8,7 +8,8 @@ export default {
         hasButton: Boolean,
         buttonLabel: String
     },
-    components: { MainButton }
+    components: { MainButton },
+    emits: ['coaching-button-click']
 }
 </script>
 
@@ -26,7 +27,8 @@ export default {
                 <p>{{ feedback.p1 }}</p>
                 <p>{{ feedback.p2 }}</p>
             </div>
-            <MainButton v-if="hasButton" :label="buttonLabel" type="secondary" />
+            <MainButton v-if="hasButton" :label="buttonLabel" type="secondary"
+                @button-click="$emit('coaching-button-click')" />
         </div>
     </div>
 </template>
