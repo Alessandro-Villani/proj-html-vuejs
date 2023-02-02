@@ -1,4 +1,5 @@
 <script>
+import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppJumbotron from './components/AppJumbotron.vue';
 import AppNewsletter from './components/AppNewsletter.vue';
@@ -25,7 +26,7 @@ export default {
             eventCards
         }
     },
-    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter }
+    components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter }
 }
 </script>
 
@@ -65,8 +66,11 @@ export default {
             </div>
         </app-section>
         <app-section type="articles" title="Articles and Tips" subtitle="Latest From The Blog" color="tertiary">
-            <div class="row row-cols-3">
+            <div class="row row-cols-3 mb-5">
                 <ArticleCard v-for="card in articleCards" :cardData="card" />
+            </div>
+            <div class="details text-center">
+                <h5>Get into details now? <a href="#">View all posts &rarr;</a></h5>
             </div>
         </app-section>
         <app-section type="events" title="Upcoming Events" subtitle="Let's Work Together">
@@ -76,7 +80,7 @@ export default {
         </app-section>
         <AppNewsletter />
     </main>
-
+    <AppFooter />
 </template>
 
 <style lang="scss">

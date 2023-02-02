@@ -5,6 +5,13 @@
     padding-top: 60px;
 }
 
-.debug {
-    border: 1px dashed black;
+.details a {
+    color: $orange;
+    text-decoration: none;
+    border-bottom: 1px solid lightgray;
+    transition: color 0.5s;
+
+    &:hover {
+        color: $lightblue;
+    }
 }

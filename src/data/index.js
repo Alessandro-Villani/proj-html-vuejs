@@ -217,16 +217,19 @@ const eventCards = [
     }
 ];
 
-const footerMenus = [
-    {
-        title: 'explore',
-        links: ['start here', 'success story', 'blog', 'courses', 'contact us']
-    },
-    {
-        title: 'information',
-        links: ['membership', 'purchase guide', 'privacy policy', 'terms of service']
-    },
-]
+const footerMenus = {
+    menus: [
+        {
+            title: 'explore',
+            links: ['Start here', 'Success story', 'Blog', 'Courses', 'Contact us']
+        },
+        {
+            title: 'information',
+            links: ['Membership', 'Purchase guide', 'Privacy policy', 'Terms of service']
+        },
+    ],
+    igImagesUrls: ['ig1.jpg', 'ig2.jpg', 'ig3.jpg' ]
+}
 
 const coachingFeedback = {
     coachName: 'Martin Garrix',
