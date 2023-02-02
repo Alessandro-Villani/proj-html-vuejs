@@ -41,6 +41,8 @@ export default {
 
 .newsletter {
     background-color: $darkblue;
+    background-image: url(../assets/img/artist-shape-color-paint-top-left.png), url(../assets/img/artist-shape-color-paint-bottom-right.png);
+    background-position: left, right;
     background-repeat: no-repeat;
     color: white;
 }
