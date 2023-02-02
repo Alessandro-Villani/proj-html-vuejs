@@ -39,6 +39,7 @@ export default {
     border-radius: 10px;
     opacity: 0.5;
     transform: scale(0.9);
+    cursor: pointer;
 
     &.active {
         opacity: 1;

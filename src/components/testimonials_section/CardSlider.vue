@@ -6,7 +6,8 @@ export default {
     data() {
         return {
             currentIndex: 0,
-            sliderInterval: null
+            sliderInterval: null,
+            sliderTimeout: null,
         }
     },
     props: {
@@ -36,8 +37,9 @@ export default {
         },
         selectCard(i) {
             clearInterval(this.sliderInterval);
+            clearTimeout(this.sliderTimeout);
             this.currentIndex = i;
-            setTimeout(() => this.slider(), 30000);
+            this.sliderTimeout = setTimeout(() => this.slider(), 30000);
         }
     },
     mounted() {
@@ -48,7 +50,8 @@ export default {
 
 <template>
     <div class="cards-row row row-cols-3 mb-5 flex-nowrap">
-        <TestimonialCard v-for="(card, i) in cardsData" :key="i" :testimonialData="card" :order="defineOrder(i)" />
+        <TestimonialCard v-for="(card, i) in cardsData" :key="i" :testimonialData="card" :order="defineOrder(i)"
+            @click="selectCard(i)" />
     </div>
     <div class="row">
         <div class="col-4 m-auto d-flex justify-content-center">
