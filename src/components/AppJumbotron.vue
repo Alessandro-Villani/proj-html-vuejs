@@ -23,6 +23,9 @@ export default {
                 </div>
             </div>
         </div>
+        <img id="bg-1" src="../assets/img/artist-hero-image-02-232x300.jpg" alt="hero-img-02">
+        <img id="bg-2" src="../assets/img/artist-hero-image-01.jpg" alt="hero-img-01">
+        <img id="bg-3" src="../assets/img/artist-hero-image-04-235x300.jpg" alt="hero-img-03">
     </section>
 </template>
 
@@ -30,8 +33,32 @@ export default {
 @use '../assets/styles/partials/variables' as *;
 
 .jumbotron {
+    background-image: url(../assets/img/artist-shape-02-600x324.png), url(../assets/img/artist-shape-03-201x300.png), url(../assets/img/artist-hero-image-03-204x300.png), url(../assets/img/artist-shape-01.png), url(../assets/img/artist-shape-04-127x300.png), url(../assets/img/artist-shape-05-300x198.png), url(../assets/img/maxcoach-shape-12-150x150.png);
+    background-position: 0 0, 30px, 15% 80%, 70%, 77% 10%, 75% 80%, 70% 85%;
+    background-repeat: no-repeat;
     background-color: $lightgray;
-    height: 500px;
+    height: 600px;
+    position: relative;
+
+    img {
+        position: absolute;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.4);
+
+        &#bg-1 {
+            top: 10%;
+            left: 10%;
+        }
+
+        &#bg-2 {
+            bottom: 5%;
+            left: 3%;
+        }
+
+        &#bg-3 {
+            bottom: 15%;
+            right: 25%;
+        }
+    }
 
     h2 {
         font-family: "Allison", cursive;
