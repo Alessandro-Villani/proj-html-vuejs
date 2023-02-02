@@ -22,31 +22,56 @@ export default {
 </script>
 
 <template>
-    <div class="col d-flex mb-5" :class="cardDirection">
-        <img class="img-fluid" :src="getImageUrl" :alt="eventData.title">
-        <div class="event-info p-4 d-flex flex-column justify-content-center">
-            <time class="mb-3">{{ formattetDate }}</time>
-            <h5 class="mb-3">{{ eventData.title }}</h5>
-            <address><font-awesome-icon icon="fa-solid fa-location-dot" /> {{ eventData.location }}</address>
+    <a :href="eventData.href" class="events-col col d-flex mb-5" :class="cardDirection">
+        <div class="events-card d-flex mb-5">
+            <img class="img-fluid" :src="getImageUrl" :alt="eventData.title">
+            <div class="event-info p-4 d-flex flex-column justify-content-center">
+                <time class="mb-3">{{ formattetDate }}</time>
+                <h5 class="mb-3">{{ eventData.title }}</h5>
+                <address><font-awesome-icon icon="fa-solid fa-location-dot" /> {{ eventData.location }}</address>
+            </div>
         </div>
-    </div>
+    </a>
 </template>
 
 <style scoped lang="scss">
-time,
-address {
-    color: gray;
-}
+@use '../../assets/styles/partials/variables' as *;
 
-time {
-    text-transform: uppercase;
-}
+.events-col {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
 
-address {
-    font-size: 14px;
-}
 
-h5 {
-    text-transform: capitalize;
+    &:hover {
+        scale: 1.1;
+    }
+
+    .events-card {
+        border: 1px solid transparent;
+        transition: all 0.5s;
+    }
+
+    &:hover .events-card {
+        border-color: $maincolor;
+    }
+
+    time,
+    address {
+        color: gray;
+    }
+
+    time {
+        text-transform: uppercase;
+    }
+
+    address {
+        font-size: 14px;
+    }
+
+    h5 {
+        text-transform: capitalize;
+    }
 }
 </style>

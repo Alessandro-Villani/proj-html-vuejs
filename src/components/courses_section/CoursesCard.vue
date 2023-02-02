@@ -17,7 +17,7 @@ export default {
 
 <template>
     <div class="col mb-3 d-flex">
-        <div class="courses-card d-flex flex-column">
+        <a :href="courseData.href" class="courses-card d-flex flex-column">
             <img class="img-fluid" :src="getImageUrl" :alt="courseData.title">
             <div class="course-info d-flex flex-column justify-content-between flex-grow-1 p-3">
                 <p class="h6 price">${{ formattedPrice }}</p>
@@ -31,7 +31,7 @@ export default {
                     }} Students</span>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </template>
 
@@ -40,6 +40,9 @@ export default {
 
 .courses-card {
     cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: black;
 
     .course-info {
 

@@ -22,7 +22,8 @@ export default {
 
 <template>
     <div class="col" :class="cardData.position">
-        <div class="article-card" :class="cardData.position" :style="{ 'background-image': `url(${backgroundImg})` }">
+        <a :href="cardData.href" class="article-card" :class="cardData.position"
+            :style="{ 'background-image': `url(${backgroundImg})` }">
             <div :class="{ 'overlay': cardData.position === 'main' }">
                 <img v-if="cardData.position !== 'main'" class="img-fluid" :src="getImageUrl" :alt="cardData.title">
                 <div class="article-data">
@@ -36,12 +37,24 @@ export default {
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </template>
 
 <style scoped lang="scss">
 @use '../../assets/styles/partials/variables' as *;
+
+.article-card {
+    transition: all 0.5s;
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+}
 
 h5 {
     text-transform: capitalize;

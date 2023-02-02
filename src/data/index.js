@@ -71,7 +71,7 @@ const coachingCards = [
     {
         title: 'on time',
         imgUrl: 'artist-box-image-04.png',
-        text: "Punctuality is cxjr top priority because it's an essential criteria to assess a program quality."
+        text: "Punctuality is our top priority because it's an essential criteria to assess a program quality."
     },
 
 ];
@@ -113,56 +113,64 @@ const coursesCards = [
         price: 18,
         lessons: 4,
         students: 50, 
-        imgUrl: 'artist-course-08-480x480.jpg'
+        imgUrl: 'artist-course-08-480x480.jpg',
+        href: '#'
     },
     {
         title: 'drawing and shading complete course',
         price: 21,
         lessons: 14,
         students: 50, 
-        imgUrl: 'artist-course-07-480x480.jpg'
+        imgUrl: 'artist-course-07-480x480.jpg',
+        href: '#'
     },
     {
         title: 'the color theory for digital artist',
         price: 19,
         lessons: 7,
         students: 50, 
-        imgUrl: 'artist-course-06-480x480.jpg'
+        imgUrl: 'artist-course-06-480x480.jpg',
+        href: '#'
     },
     {
         title: 'ultimate guide to digital sketching for beginner',
         price: 35,
         lessons: 14,
         students: 50, 
-        imgUrl: 'artist-course-05-480x480.jpg'
+        imgUrl: 'artist-course-05-480x480.jpg',
+        href: '#'
     },
     {
         title: 'portrait drawing the smart way',
         price: 19,
         lessons: 2,
         students: 50, 
-        imgUrl: 'artist-course-04-480x480.jpg'
+        imgUrl: 'artist-course-04-480x480.jpg',
+        href: '#'
     },
     {
         title: 'mastering watercolor painting from beginner',
         price: 19,
         lessons: 9,
         students: 50, 
-        imgUrl: 'artist-course-03-480x480.jpg'
+        imgUrl: 'artist-course-03-480x480.jpg',
+        href: '#'
     },
     {
         title: 'the art & science of drawing',
         price: 25,
         lessons: 4,
         students: 50, 
-        imgUrl: 'artist-course-02-480x480.jpg'
+        imgUrl: 'artist-course-02-480x480.jpg',
+        href: '#'
     },
     {
         title: 'the colored pencil drawing course',
         price: 22,
         lessons: 6,
         students: 50, 
-        imgUrl: 'artist-course-01-480x480.jpg'
+        imgUrl: 'artist-course-01-480x480.jpg',
+        href: '#'
     }, 
 ];
 
@@ -172,21 +180,24 @@ const articleCards = [
         date: new Date('05-15-2020'),
         views: 688, 
         imgUrl: 'artist-blog-03-480x356.jpeg',
-        position: 'left'
+        position: 'left',
+        href: '#'
     },
     {
         title: 'connection between self-portraits and identity',
         date: new Date('05-15-2020'),
         views: 377, 
         imgUrl: 'artist-blog-02-500x680.jpg',
-        position: 'main'
+        position: 'main',
+        href: '#'
     },
     {
         title: 'pocket-sized notebooks hold miniature paintings',
         date: new Date('05-15-2020'),
         views: 603, 
         imgUrl: 'artist-blog-01-480x356.jpg',
-        position: 'right'
+        position: 'right',
+        href: '#'
     }
 ];
 
@@ -195,25 +206,29 @@ const eventCards = [
         title: 'storytelling workshop',
         date: new Date('11-22-2020'),
         location: 'Texas, US', 
-        imgUrl: 'artist-event-04-250x300.jpg'
+        imgUrl: 'artist-event-04-250x300.jpg',
+        href: '#'
     },
     {
         title: 'painting art contest 2020',
         date: new Date('10-10-2020'),
         location: 'New York, US', 
-        imgUrl: 'artist-event-03-250x300.jpg'
+        imgUrl: 'artist-event-03-250x300.jpg',
+        href: '#'
     },
     {
         title: 'internal art fair 2020',
         date: new Date('11-23-2020'),
         location: 'Hamburg, Germany', 
-        imgUrl: 'artist-event-02-250x300.jpg'
+        imgUrl: 'artist-event-02-250x300.jpg',
+        href: '#'
     },
     {
         title: 'street performance: call for artist',
         date: new Date('12-15-2020'),
         location: 'Illinois, US', 
-        imgUrl: 'artist-event-01-250x300.jpg'
+        imgUrl: 'artist-event-01-250x300.jpg',
+        href: '#'
     }
 ];
 
