@@ -5,13 +5,18 @@ export default {
         cardData: Object
     },
     computed: {
+        //Computed returning dynamic url
         getImageUrl() {
             return new URL(`../../assets/img/${this.cardData.imgUrl}`, import.meta.url).href;
         },
+
+        //Computed returning background based on card position
         backgroundImg() {
             return this.cardData.position === 'main' ? this.getImageUrl : ''
 
         },
+
+        //Computed returning formatted date in the desired format
         formattetDate() {
             const options = { month: 'long', day: 'numeric', year: 'numeric' };
             return this.cardData.date.toLocaleDateString('en-US', options);

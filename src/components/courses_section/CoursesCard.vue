@@ -5,9 +5,12 @@ export default {
         courseData: Object
     },
     computed: {
+        //Computed for getting dynamic url
         getImageUrl() {
             return new URL(`../../assets/img/${this.courseData.imgUrl}`, import.meta.url).href;
         },
+
+        //Computed formatting price in the desired format
         formattedPrice() {
             return this.courseData.price.toFixed(2);
         }

@@ -13,6 +13,7 @@ export default {
     },
     emits: ['send-form', 'update-field'],
     methods: {
+        //Function resetting input field and sending emit
         sendForm() {
             this.inputField = '';
             this.$emit('send-form')

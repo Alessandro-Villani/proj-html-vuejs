@@ -24,12 +24,14 @@ export default {
         label: String
     },
     computed: {
+        //Computed returning actual date in ms
         finalDateInMs() {
             return new Date(this.date).getTime();
         }
     },
     emits: ['timer-button-click'],
     methods: {
+        //Function for timer
         timer() {
             const newTimer = setInterval(() => {
                 //Pick actual date

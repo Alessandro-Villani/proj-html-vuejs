@@ -5,6 +5,7 @@ export default {
         coachingCardData: Object
     },
     computed: {
+        //Computed returning dynamic url
         getImageUrl() {
             return new URL(`../../assets/img/${this.coachingCardData.imgUrl}`, import.meta.url).href;
         },

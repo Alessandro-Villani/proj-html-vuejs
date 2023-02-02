@@ -15,6 +15,7 @@ export default {
     },
     components: { TestimonialCard },
     methods: {
+        //Function defining order based on currentIndex
         defineOrder(i) {
             if (i === this.currentIndex) {
                 return 1
@@ -26,6 +27,8 @@ export default {
                 return 3
             }
         },
+
+        //Function activating slider interval
         slider() {
             this.sliderInterval = setInterval(() => {
                 if (this.currentIndex === (this.cardsData.length - 1)) {
@@ -35,6 +38,8 @@ export default {
                 }
             }, 3000)
         },
+
+        //Function setting currentIndex based on the selected card or dot, and stopping slider for 30s
         selectCard(i) {
             clearInterval(this.sliderInterval);
             clearTimeout(this.sliderTimeout);

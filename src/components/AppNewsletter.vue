@@ -10,9 +10,12 @@ export default {
     },
     components: { AppForm },
     methods: {
+        //Function updating email field on update
         updateEmail(email) {
             this.email = email;
         },
+
+        //Function registering sent form
         formSent() {
             console.log('form sent')
         }

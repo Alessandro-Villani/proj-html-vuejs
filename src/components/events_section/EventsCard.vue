@@ -6,14 +6,18 @@ export default {
         cardIndex: Number
     },
     computed: {
+        //Computed returning dynamic img url
         getImageUrl() {
             return new URL(`../../assets/img/${this.eventData.imgUrl}`, import.meta.url).href;
         },
+
+        //Computed returning formatted date in the desired format
         formattetDate() {
             const options = { month: 'short', day: 'numeric', year: 'numeric' };
             return this.eventData.date.toLocaleDateString('en-US', options);
         },
-        //Function changing flex direction every 2 cards based on card index
+
+        //Computed returning flex direction based on card index, changing it every 2 cards
         cardDirection() {
             return (this.cardIndex % 4) < 2 ? 'flex-row' : 'flex-row-reverse'
         }

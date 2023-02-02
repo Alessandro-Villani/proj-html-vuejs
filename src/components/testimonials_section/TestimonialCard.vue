@@ -6,6 +6,7 @@ export default {
         order: Number
     },
     computed: {
+        //Computed returning dynamic image url
         getImageUrl() {
             return new URL(`../../assets/img/${this.testimonialData.imgUrl}`, import.meta.url).href;
         }

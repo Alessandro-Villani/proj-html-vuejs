@@ -10,6 +10,7 @@ export default {
         }
     },
     methods: {
+        //Function returning image url based on index
         getImageUrl(i) {
             console.log(i);
             console.log(footerMenus.igImagesUrls[i]);
