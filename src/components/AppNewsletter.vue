@@ -41,6 +41,7 @@ export default {
 
 .newsletter {
     background-color: $darkblue;
+    background-repeat: no-repeat;
     color: white;
 }
 </style>

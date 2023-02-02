@@ -49,12 +49,12 @@ export default {
 
     &:hover .course-info {
         transform: translateY(-50px);
-        border: 1px solid $orange;
+        border: 1px solid $maincolor;
     }
 }
 
 .price {
-    color: $orange;
+    color: $maincolor;
     font-weight: bolder;
 }
 

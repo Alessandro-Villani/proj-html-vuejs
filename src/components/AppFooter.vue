@@ -80,7 +80,7 @@ a {
 }
 
 .social-pics a {
-    color: $orange;
+    color: $maincolor;
     font-weight: bold;
     transition: color 0.5s;
 

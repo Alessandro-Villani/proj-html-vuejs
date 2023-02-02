@@ -18,7 +18,7 @@ export default {
 @use '../../assets/styles/partials/variables' as *;
 
 .btn.btn-main {
-    background-color: $orange;
+    background-color: $maincolor;
     transition: all 0.5s;
     color: white;
     font-weight: bolder;
@@ -29,8 +29,8 @@ export default {
     }
 
     &.secondary {
-        background-color: rgba($orange, $alpha: 0.3);
-        color: $orange;
+        background-color: rgba($maincolor, $alpha: 0.3);
+        color: $maincolor;
     }
 
     &:hover {
@@ -39,7 +39,7 @@ export default {
     }
 
     &.secondary:hover {
-        background-color: $orange;
+        background-color: $maincolor;
         color: white;
     }
 }

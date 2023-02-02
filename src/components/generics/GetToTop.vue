@@ -22,7 +22,7 @@ a {
     width: 50px;
     color: white;
     text-decoration: none;
-    background-color: $orange;
+    background-color: $maincolor;
     border-radius: 50%;
     position: fixed;
     bottom: 20px;
