@@ -59,6 +59,11 @@ export default {
         transform: scale(1);
     }
 
+    &:not(.active):hover {
+        opacity: 0.8;
+        scale: 1.1;
+    }
+
     img {
         width: 80px;
         height: 80px;

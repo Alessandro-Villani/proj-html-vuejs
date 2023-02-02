@@ -12,9 +12,6 @@ export default {
     methods: {
         //Function returning image url based on index
         getImageUrl(i) {
-            console.log(i);
-            console.log(footerMenus.igImagesUrls[i]);
-            console.log(new URL(`../assets/img/${footerMenus.igImagesUrls[i]}`, import.meta.url).href)
             return new URL(`../assets/img/${footerMenus.igImagesUrls[i]}`, import.meta.url).href;
         },
     }
@@ -47,8 +44,8 @@ export default {
                 <div class="social-pics col">
                     <h5 class="d-inline-block me-2 mb-3">Instagram</h5><span><a href="#">@maxcoach</a></span>
                     <div class="row row-cols-3">
-                        <img v-for="(image, i) in footerMenus.igImagesUrls" class="col img-fluid" :src="getImageUrl(i)"
-                            :alt="`ig-${i}`">
+                        <a v-for="(image, i) in footerMenus.igImagesUrls" href="#" class="col ig-a"><img
+                                class="img-fluid" :src="getImageUrl(i)" :alt="`ig-${i}`"></a>
                     </div>
 
                 </div>
@@ -70,6 +67,7 @@ ul {
 a {
     text-decoration: none;
     color: currentColor;
+    transition: all 0.5s;
 
     &:hover {
         color: $blue;
@@ -83,11 +81,15 @@ a {
 .social-pics a {
     color: $maincolor;
     font-weight: bold;
-    transition: color 0.5s;
+    transition: all 0.5s;
 
     &:hover {
         color: $lightblue;
     }
+}
+
+.social-pics .ig-a:hover {
+    scale: 1.1;
 }
 
 .footer-bottom h6 {

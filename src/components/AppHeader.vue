@@ -7,6 +7,19 @@ export default {
         return {
             headerMenus
         }
+    },
+    methods: {
+        closeOtherMenus(index) {
+            this.headerMenus.menuButtons.forEach((menuButton, i) => {
+                if (i !== index) {
+                    menuButton.submenu.show = false
+                }
+            })
+        },
+        toggleMenu(link, index) {
+            this.closeOtherMenus(index);
+            link.submenu.show = !link.submenu.show
+        }
     }
 }
 </script>
@@ -18,8 +31,8 @@ export default {
                 <a href="#" class="logo col-2"><img class="img-fluid" src="../assets/img/dark-logo.png" alt="logo"></a>
                 <nav class="menu col flex-grow-1 align-items-center">
                     <ul class="d-flex justify-content-between mb-0">
-                        <li v-for="link in headerMenus.menuButtons" :key="link.id"><button class="menu-btn"
-                                @click="link.submenu.show = !link.submenu.show"><span class="me-2">{{
+                        <li v-for="(link, i) in headerMenus.menuButtons" :key="link.id"><button class="menu-btn"
+                                @click="toggleMenu(link, i)"><span class="me-2">{{
                                     link.title
                                 }}</span><font-awesome-icon icon="fa-solid fa-chevron-down"
                                     :class="{ 'rotate': link.submenu.show }" /></button>
@@ -58,6 +71,13 @@ ul {
         background-color: transparent;
         padding: 6px;
         border: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+
+        &:hover {
+            color: $blue;
+            border-color: currentColor;
+        }
     }
 
     li {
@@ -77,6 +97,14 @@ ul {
             z-index: 1;
             border: 1px solid $lightgray;
             background-color: white;
+
+            .menu-btn {
+                border: none;
+
+                &:hover {
+                    border: none;
+                }
+            }
         }
 
 
@@ -101,6 +129,12 @@ ul {
 
 .social a {
     color: $darkgray;
+    border: none;
+
+    &:hover {
+        color: $darkgray;
+        border: none;
+    }
 
     svg {
         transition: all 0.5s;

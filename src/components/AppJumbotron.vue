@@ -35,7 +35,7 @@ export default {
 
 .jumbotron {
     background-image: url(../assets/img/artist-shape-02-600x324.png), url(../assets/img/artist-shape-03-201x300.png), url(../assets/img/artist-hero-image-03-204x300.png), url(../assets/img/artist-shape-01.png), url(../assets/img/artist-shape-04-127x300.png), url(../assets/img/artist-shape-05-300x198.png), url(../assets/img/maxcoach-shape-12-150x150.png);
-    background-position: 0 0, 30px, 15% 80%, 70%, 77% 10%, 75% 80%, 70% 85%;
+    background-position: 0 0, 30px, 15% 80%, 90%, 95% 10%, 85% 80%, 80% 85%;
     background-repeat: no-repeat;
     background-color: $lightgray;
     height: 600px;
@@ -57,7 +57,7 @@ export default {
 
         &#bg-3 {
             bottom: 15%;
-            right: 25%;
+            right: 15%;
         }
     }
 

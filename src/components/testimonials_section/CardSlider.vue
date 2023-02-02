@@ -30,6 +30,8 @@ export default {
 
         //Function activating slider interval
         slider() {
+            clearInterval(this.sliderInterval);
+            this.sliderTimeout = null;
             this.sliderInterval = setInterval(() => {
                 if (this.currentIndex === (this.cardsData.length - 1)) {
                     this.currentIndex = 0;
@@ -45,6 +47,18 @@ export default {
             clearTimeout(this.sliderTimeout);
             this.currentIndex = i;
             this.sliderTimeout = setTimeout(() => this.slider(), 30000);
+        },
+
+        //Function to pause slider
+        pauseSlider() {
+            clearInterval(this.sliderInterval);
+        },
+
+        //Function to resume slider if there's no timeout
+        resumeSlider() {
+            if (!this.sliderTimeout) {
+                this.slider();
+            }
         }
     },
     mounted() {
@@ -56,7 +70,7 @@ export default {
 <template>
     <div class="cards-row row row-cols-3 mb-5 flex-nowrap">
         <TestimonialCard v-for="(card, i) in cardsData" :key="i" :testimonialData="card" :order="defineOrder(i)"
-            @click="selectCard(i)" />
+            @click="selectCard(i)" @mouseover="pauseSlider" @mouseleave="resumeSlider" />
     </div>
     <div class="row">
         <div class="col-4 m-auto d-flex justify-content-center">
