@@ -47,11 +47,36 @@ h2.section-title {
     font-size: 28px;
 }
 
-section.secondary {
-    background-color: $lightgray;
+section {
+    background-repeat: no-repeat;
+
+    &.secondary {
+        background-color: $lightgray;
+    }
+
+    &.tertiary {
+        background-color: $mediumgray;
+    }
 }
 
-section.tertiary {
-    background-color: $mediumgray;
+
+.coaching {
+    background-image: url(../assets/img/artist-shape-01.png), url(../assets/img/maxcoach-shape-14.png), url(../assets/img/maxcoach-shape-13.png), url(../assets/img/maxcoach-shape-12.png), url(../assets/img/wave.svg);
+    background-position: 0 10%, center 10%, 102% 10%, 63% 95%, 0 bottom, ;
+}
+
+.courses {
+    background-image: url(../assets/img/artist-shape-01.png), url(../assets/img/artist-shape-01.png);
+    background-position: -20% 50%, 120% 10%;
+}
+
+.articles {
+    background-image: url(../assets/img/maxcoach-shape-14.png), url(../assets/img/maxcoach-shape-12.png);
+    background-position: center center, 42% 30%;
+}
+
+.events {
+    background-image: url(../assets/img/artist-shape-01.png), url(../assets/img/maxcoach-shape-13.png);
+    background-position: -20% 120%, 102% 10%;
 }
 </style>

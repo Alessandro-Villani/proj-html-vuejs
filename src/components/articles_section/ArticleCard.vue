@@ -95,6 +95,7 @@ h5 {
 
         .article-data {
             padding: 12px;
+            background-color: white;
 
             h5 {
                 font-size: 16px;

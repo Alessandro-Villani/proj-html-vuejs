@@ -42,7 +42,7 @@ export default {
     cursor: pointer;
 
     .course-info {
-        background-color: white;
+
         border: 1px solid transparent;
         transition: all 0.5s;
     }
@@ -50,6 +50,7 @@ export default {
     &:hover .course-info {
         transform: translateY(-50px);
         border: 1px solid $maincolor;
+        background-color: white;
     }
 }
 
