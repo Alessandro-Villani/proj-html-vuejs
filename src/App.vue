@@ -27,7 +27,8 @@ export default {
             coursesCards,
             articleCards,
             eventCards,
-            sideBarIcons
+            sideBarIcons,
+            emailField: ''
         }
     },
     components: { CountDown, AppHeader, AppJumbotron, AppSection, CoachingCard, CoachingFeedbackCard, CardSlider, CoursesCard, MainButton, ArticleCard, EventsCard, AppNewsletter, AppFooter, GetToTop, SideBar },
@@ -46,6 +47,12 @@ export default {
         },
         sidebarButtonClick(e) {
             console.log('sidebar ' + e + ' clicked')
+        },
+        updateEmailField(e) {
+            this.emailField = e;
+        },
+        newsletterFormSent() {
+            console.log('newsletter email sent ' + this.emailField)
         }
     }
 }
@@ -129,7 +136,7 @@ export default {
         </app-section>
 
         <!-- NEWSLETTER SECTION -->
-        <AppNewsletter />
+        <AppNewsletter @update-email="updateEmailField" @newsletter-form-sent="newsletterFormSent" />
     </main>
 
     <!-- FOOTER -->

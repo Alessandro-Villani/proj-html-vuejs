@@ -3,23 +3,8 @@ import AppForm from './generics/AppForm.vue';
 
 export default {
     name: "AppNewsletter",
-    data() {
-        return {
-            email: ''
-        }
-    },
     components: { AppForm },
-    methods: {
-        //Function updating email field on update
-        updateEmail(email) {
-            this.email = email;
-        },
-
-        //Function registering sent form
-        formSent() {
-            console.log('form sent')
-        }
-    }
+    emits: ['update-email', 'newsletter-form-sent']
 }
 </script>
 
@@ -31,8 +16,8 @@ export default {
                     <h2>Newsletter to get in touch</h2>
                 </div>
                 <div class="col-9 d-flex align-items-center justify-content-center">
-                    <AppForm type="email" placeholder="Your e-mail" buttonLabel="&rarr;" @update-field="updateEmail"
-                        @send-form="formSent" />
+                    <AppForm type="email" placeholder="Your e-mail" buttonLabel="&rarr;"
+                        @update-field="$emit('update-email', $event)" @send-form="$emit('newsletter-form-sent')" />
                 </div>
             </div>
         </div>
