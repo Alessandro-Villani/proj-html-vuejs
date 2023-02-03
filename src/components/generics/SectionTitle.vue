@@ -29,9 +29,9 @@ div {
 }
 
 .left {
-    rotate: 270deg;
+    rotate: 90deg;
     bottom: 200px;
-    left: 50px;
+    left: -280px;
     transform: translateY(-100%);
 }
 
