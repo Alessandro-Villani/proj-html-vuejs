@@ -38,9 +38,9 @@ export default {
     .sidebar {
         background-color: white;
         list-style: none;
-        border: 1px solid $darkgray;
-        border-right: none;
-        border-radius: 3px 0 0 3px;
+        box-shadow: 0 0 10px rgba($color: $darkgray, $alpha: 0.5);
+        border: 1px solid transparent;
+        border-radius: 5px 0 0 5px;
         width: 50%;
 
         button {
