@@ -20,6 +20,7 @@ export default {
             } else if (this.order === 2) {
                 return 'scale(0.9) translateX(2%)';
             }
+            return null;
         },
     }
 }
